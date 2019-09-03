@@ -38,6 +38,7 @@ class MyScene extends CGFscene {
         this.displayNormals = false;
         this.objectComplexity = 0.5;
         this.scaleFactor = 2.0;
+        this.globalambientlight=0.3;
 
     }
     initLights() {
@@ -96,6 +97,12 @@ class MyScene extends CGFscene {
 
     updateObjectComplexity(){
         this.objects[this.selectedObject].updateBuffers(this.objectComplexity);
+    }
+
+    updateglobalLight(){
+        this.setGlobalAmbientLight(this.globalambientlight, this.globalambientlight, this.globalambientlight, 1.0);
+
+        
     }
 
 
