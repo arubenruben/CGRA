@@ -25,11 +25,12 @@ class MyScene extends CGFscene {
         this.plane = new MyPlane(this, 5);
         this.cone = new MyCone(this, 3, 1);
         this.pyramid = new MyPyramid(this, 3, 1);
-        
-        this.objects = [this.plane, this.pyramid, this.cone];
+        this.cube=new MyUnitcube(this);
+        this.tangram=new MyTangram(this);
+        this.objects = [this.plane, this.pyramid, this.cone,this.cube,this.tangram];
 
         // Labels and ID's for object selection on MyInterface
-        this.objectIDs = { 'Plane': 0 , 'Pyramid': 1, 'Cone': 2};
+        this.objectIDs = { 'Plane': 0 , 'Pyramid': 1, 'Cone': 2,'MyUnitCube':3,'MyTangram':4};
 
         //Other variables connected to MyInterface
         this.selectedObject = 0;
@@ -96,7 +97,9 @@ class MyScene extends CGFscene {
     };
 
     updateObjectComplexity(){
-        this.objects[this.selectedObject].updateBuffers(this.objectComplexity);
+        if(this.selectedObject<3){
+            this.objects[this.selectedObject].updateBuffers(this.objectComplexity); // Para tirar um erro na consola das figuras anteriores nao terem complexityupdate foi acrescentado este if
+        }
     }
 
     updateglobalLight(){
