@@ -37,7 +37,7 @@ class MyTangram extends CGFobject {
         this.scene.translate(-0.98,-1,0);
         this.scene.rotate(Math.PI/2.0,0,0,1);
         this.triangle_blue.display();
-        
+
         this.scene.popMatrix();
 
 
@@ -50,12 +50,12 @@ class MyTangram extends CGFobject {
         this.scene.popMatrix();
 
         this.scene.pushMatrix();
-        
+
         this.scene.translate(0.5,2.5,0);
-        
-        
+
+
         this.scene.scale(0.5,0.5,1);
-        
+
         this.scene.translate(1,1,0);
         this.triangle_purple.display();
         this.scene.popMatrix();
@@ -72,7 +72,7 @@ class MyTangram extends CGFobject {
 
         this.scene.pushMatrix();
 
-    
+
         this.scene.translate(1.375,-0.47,0);
         this.scene.scale(0.6,0.6,1);
         this.scene.rotate(-Math.PI/4.0,0,0,1);
@@ -80,6 +80,17 @@ class MyTangram extends CGFobject {
         this.scene.popMatrix();
 
         
+
+    }
+
+    enableNormalViz() {
+        this.triangle_blue.enableNormalViz();
+        this.triangle_orange.enableNormalViz();
+        this.triangle_pink.enableNormalViz();
+        this.triangle_purple.enableNormalViz();
+        this.triangle_red.enableNormalViz();
+        this.parallelogram_yellow.enableNormalViz();
+        this.diamond_verde.enableNormalViz();
 
     }
     

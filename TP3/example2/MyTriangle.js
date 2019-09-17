@@ -11,15 +11,29 @@ class MyTriangle extends CGFobject {
 	initBuffers() {
 		this.vertices = [
 			-1, -1, 0,	//0
-            1,-1,0,
-            -1,1,0	
+            1,-1,0,//1
+			-1,1,0,	//2
+			
+			-1, -1, 0,	//3
+            1,-1,0,//4
+            -1,1,0	//5
 		];
-
+		
 		//Counter-clockwise reference of vertices
 		this.indices = [
-			0,1,2
+			0,1,2,
+			2,1,0
 			
 		];
+		
+		this.normals=[];
+		this.normals.push(0,0,1);
+		this.normals.push(0,0,1);
+		this.normals.push(0,0,1);
+		this.normals.push(0,0,-1);
+		this.normals.push(0,0,-1);
+		this.normals.push(0,0,-1);
+		
 		this.primitiveType = this.scene.gl.TRIANGLES;
 		this.initGLBuffers();
 	}

@@ -13,6 +13,11 @@ class MyParalellogram extends CGFobject {
 			0,0,0,
 			2,0,0,
 			3,1,0,
+			1,1,0,
+
+			0,0,0,
+			2,0,0,
+			3,1,0,
 			1,1,0
 		];
 
@@ -23,6 +28,20 @@ class MyParalellogram extends CGFobject {
 			0,3,2,
 			2,1,0
 		];
+
+		this.normals=[];
+		
+		this.normals.push(0,0,1);
+		this.normals.push(0,0,1);
+		this.normals.push(0,0,1);
+		this.normals.push(0,0,1);
+		this.normals.push(0,0,-1);
+		this.normals.push(0,0,-1);
+		this.normals.push(0,0,-1);
+		this.normals.push(0,0,-1);
+
+
+
 		this.primitiveType = this.scene.gl.TRIANGLES;
 		this.initGLBuffers();
 	}
