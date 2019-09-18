@@ -50,6 +50,11 @@ class MyTangram extends CGFobject {
         this.specular_red.setSpecular(1,0,0,1);
         this.specular_red.setDiffuse(0.2,0,0,1);
         this.specular_red.setAmbient(0.2,0,0,1);
+
+        this.specular_orange=new CGFappearance(this.scene);
+        this.specular_orange.setSpecular(1,0.5,0.2,1);
+        this.specular_orange.setDiffuse(0.2,0.1,0.05,1);
+        this.specular_orange.setAmbient(0.2,0,0.05,1);
         
         
     }
@@ -58,7 +63,8 @@ class MyTangram extends CGFobject {
         
         this.scene.pushMatrix();
         this.scene.translate(0.5,0.5,0);
-        this.specular_green.apply();
+        this.scene.updateCustomMaterial();
+        this.scene.customMaterial.apply();
         this.diamond_verde.display();
         this.scene.popMatrix();
 
@@ -66,7 +72,7 @@ class MyTangram extends CGFobject {
 
         this.scene.translate(-1.33,0,0);
         this.scene.rotate(Math.PI/4,0,0,1);
-
+        this.specular_orange.apply();
         this.triangle_orange.display();
 
         this.scene.popMatrix();
