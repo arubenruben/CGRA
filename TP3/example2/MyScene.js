@@ -131,6 +131,12 @@ class MyScene extends CGFscene {
         this.material3.setSpecular(1, 0, 0, 1.0);
         this.material3.setShininess(10.0);
 
+        this.material_wood=new CGFappearance(this);
+        this.material_wood.setAmbient(0.5, 0.5, 0.5, 1.0);
+        this.material_wood.setDiffuse(0.2, 0.2, 0.2, 1.0);
+        this.material_wood.setSpecular(0.1, 0.1, 0.1, 1.0);
+        this.material_wood.setShininess(10.0);
+
         // Custom material (can be changed in the interface)
         // initially midrange values on ambient, diffuse and specular, on R, G and B respectively
 
@@ -144,10 +150,10 @@ class MyScene extends CGFscene {
 
         this.updateCustomMaterial();
 
-        this.materials = [this.material1, this.material2, this.material3, this.customMaterial];
+        this.materials = [this.material1, this.material2, this.material3, this.customMaterial,this.material_wood];
 
         // Labels and ID's for object selection on MyInterface
-        this.materialIDs = {'Red Ambient': 0, 'Red Diffuse': 1, 'Red Specular': 2, 'Custom': 3 };
+        this.materialIDs = {'Red Ambient': 0, 'Red Diffuse': 1, 'Red Specular': 2, 'Custom': 3, 'Madeira_not_specular':4 };
     }
     display() {
         // ---- BEGIN Background, camera and axis setup
@@ -168,8 +174,9 @@ class MyScene extends CGFscene {
             this.axis.display();
 
         // ---- BEGIN Primitive drawing section
-
-        this.materials[this.selectedMaterial].apply();
+        if(this.selectedObject!=4){
+            this.materials[this.selectedMaterial].apply(); //Se for um tangram vai aplicar os materias especificas
+        }
 
         this.pushMatrix();
         this.scale(this.scaleFactor,this.scaleFactor,this.scaleFactor);
