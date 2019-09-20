@@ -43,7 +43,7 @@ class MyTangram extends CGFobject {
 
         this.scene.translate(-1.33, 0, 0);
         this.scene.rotate(Math.PI / 4, 0, 0, 1);
-
+        this.triangle_orange.updatetextcoords('orange');
         this.triangle_orange.display();
 
         this.scene.popMatrix();
@@ -52,7 +52,7 @@ class MyTangram extends CGFobject {
 
         this.scene.translate(-0.98, -1, 0);
         this.scene.rotate(Math.PI / 2.0, 0, 0, 1);
-
+        this.triangle_blue.updatetextcoords('blue');
         this.triangle_blue.display();
 
         this.scene.popMatrix();
@@ -75,7 +75,7 @@ class MyTangram extends CGFobject {
         this.scene.scale(0.5, 0.5, 1);
 
         this.scene.translate(1, 1, 0);
-
+        this.triangle_purple.updatetextcoords('purple');
         this.triangle_purple.display(); //Este e que e o purple
         this.scene.popMatrix();
 
@@ -85,7 +85,7 @@ class MyTangram extends CGFobject {
         this.scene.translate(0, -1.03, 0);
         this.scene.scale(0.8, 0.71, 1);
         this.scene.rotate(Math.PI / 2.0 + Math.PI / 4.0, 0, 0, 1);
-
+        this.triangle_pink.updatetextcoords('pink');
         this.triangle_pink.display();
         this.scene.popMatrix();
 
@@ -96,7 +96,7 @@ class MyTangram extends CGFobject {
         this.scene.translate(1.375, -0.47, 0);
         this.scene.scale(0.6, 0.6, 1);
         this.scene.rotate(-Math.PI / 4.0, 0, 0, 1);
-
+        this.triangle_red.updatetextcoords('red');
         this.triangle_red.display();
         this.scene.popMatrix();
 

@@ -51,8 +51,9 @@ class MyTriangle extends CGFobject {
 			case 'orange':
 
 				this.texCoords = [
-
-
+					0.5,0.5,
+					0.25,0.75,
+					0.25,0.25
 				];
 
 				break;
@@ -60,7 +61,9 @@ class MyTriangle extends CGFobject {
 			case 'blue':
 
 				this.texCoords = [
-
+					0.25,0.25,
+					0.0,0.3,
+					0.0,0.1
 
 				];
 
@@ -68,9 +71,11 @@ class MyTriangle extends CGFobject {
 				break;
 
 			case 'pink':
-				this.texCoords = [
-
-
+				
+			this.texCoords = [
+					0.5,0.5,
+					1.0,1.0,
+					1.0,0.0
 				];
 
 				break;
@@ -78,11 +83,22 @@ class MyTriangle extends CGFobject {
 			case 'purple':
 
 				this.texCoords = [
-
-
+					0.5,0.5,
+					0.75,0.75,
+					0.25,0.75
 				];
 
 				break;
+
+			case 'red':
+				this.texCoords=[
+					0.5,0.5,
+					1.0,0.0,
+					0.0,0.0
+				];
+			
+
+			break;
 
 		}
 
@@ -90,7 +106,7 @@ class MyTriangle extends CGFobject {
 
 
 		//Chamada ao sistema para atualizar o Buffer das text coords guardado da inicializacao
-		updateTexCoordsGLBuffers();
+		this.updateTexCoordsGLBuffers();
 
 	}
 }
