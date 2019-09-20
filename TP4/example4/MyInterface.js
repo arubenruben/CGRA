@@ -19,6 +19,7 @@ class MyInterface extends CGFinterface {
         //Checkbox element in GUI
         this.gui.add(this.scene, 'displayAxis').name('Display Axis');
         this.gui.add(this.scene,'show_my_quad').name('Display Quad');
+        this.gui.add(this.scene,'show_my_tangram').name('Display Tangram');
         this.gui.add(this.scene,'show_my_quad_material').name('Display_Quad_Material');
 
         //Dropdown for textures
@@ -26,6 +27,7 @@ class MyInterface extends CGFinterface {
         //Dropdown for wrapping (S)
         this.gui.add(this.scene, 'wrapS', this.scene.wrappingS).name('Wrap S').onChange(this.scene.updateTextureWrapping.bind(this.scene));
         this.gui.add(this.scene, 'wrapT', this.scene.wrappingT).name('Wrap T').onChange(this.scene.updateTextureWrapping.bind(this.scene));
+        
 
         //Groups for Texture coordinates per vertex (MyQuad)
         var f0 = this.gui.addFolder('Top Left Coords')
