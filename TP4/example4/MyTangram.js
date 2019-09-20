@@ -20,7 +20,7 @@ class MyTangram extends CGFobject {
 
     init_materials() {
 
-        this.tangram_material = new CGFappearance(this);
+        this.tangram_material = new CGFappearance(this.scene);
         this.tangram_material.setAmbient(0.1, 0.1, 0.1, 1);
         this.tangram_material.setDiffuse(0.9, 0.9, 0.9, 1);
         this.tangram_material.setSpecular(0.1, 0.1, 0.1, 1);
@@ -36,8 +36,6 @@ class MyTangram extends CGFobject {
 
         this.scene.pushMatrix();
         this.scene.translate(0.5, 0.5, 0);
-        this.scene.updateCustomMaterial();
-
         this.diamond_verde.display();
         this.scene.popMatrix();
 

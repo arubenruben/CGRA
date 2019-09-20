@@ -45,23 +45,44 @@ class MyTriangle extends CGFobject {
 
 	updatetextcoords(id) {
 
-		
-		switch(id){
-			
+
+		switch (id) {
+
 			case 'orange':
-				
-				this.texCoords=[
-		
-		
+
+				this.texCoords = [
+
+
 				];
 
-			break;
+				break;
 
 			case 'blue':
-				
+
+				this.texCoords = [
 
 
-			break;
+				];
+
+
+				break;
+
+			case 'pink':
+				this.texCoords = [
+
+
+				];
+
+				break;
+
+			case 'purple':
+
+				this.texCoords = [
+
+
+				];
+
+				break;
 
 		}
 
