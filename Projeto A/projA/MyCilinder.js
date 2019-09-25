@@ -1,8 +1,8 @@
 /**
-* MyPrism
+* MyCilinder
 * @constructor
 */
-class MyPrism extends CGFobject {
+class MyCilinder extends CGFobject {
     constructor(scene, slices, stacks) {
         super(scene);
         /*Falta establecer uma condicao que permita desenhar o minimo de slices que um primso tem*/
@@ -36,9 +36,9 @@ class MyPrism extends CGFobject {
 
             //triangle normal computed by cross product of two edges
             var normal= [
-                saa-sa,
-                0,
-                caa-ca
+                Math.cos(ang),
+                Math.PI/4.0,
+                -Math.sin(ang)
             ];
 
             // normalization
